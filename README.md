@@ -1,10 +1,11 @@
-# Gestor de Clientes
+Documentacion para Mavi
+
+Gestor de Clientes
 
 Aplicación web para la gestión de clientes (CRUD completo) con **Backend** en Node.js (Express + TypeScript + Prisma + SQLite) y **Frontend** en React (Vite + TypeScript).
 
-## Estructura del Proyecto
+Estructura del Proyecto
 
-```
 examen-mavi/
 ├── backend/          # API REST con Express y Prisma
 │   ├── prisma/       # Esquema y migraciones de la BD
@@ -21,37 +22,37 @@ examen-mavi/
 │   │   └── App.tsx      # Componente principal
 │   └── package.json
 └── README.md
-```
 
-## Requisitos Previos
+
+Requisitos Previos
 
 - **Node.js** v18 o superior
 - **npm** v9 o superior
 
-## Instalación y Ejecución
+Instalación y Ejecución
 
-### 1. Clonar el repositorio
+# 1. Clonar el repositorio
 
-```bash
+  bash
 git clone <url-del-repositorio>
 cd examen-mavi
-```
 
-### 2. Backend
 
-```bash
-# Entrar al directorio del backend
+# 2. Backend
+
+  bash
+  Entrar al directorio del backend
 cd backend
 
 # Instalar dependencias
 npm install
 
 # Ejecutar migraciones de la base de datos (crea el archivo SQLite)
-npx prisma migrate dev --name init
+npx prisma migrate dev --name init el cual ejecutamos en la terminal de VS Code
 
 # Iniciar el servidor de desarrollo (puerto 3001)
-npm run dev
-```
+npm run dev aqui iniciamos el servidor.
+
 
 El servidor estará disponible en: `http://localhost:3001`
 
@@ -59,7 +60,7 @@ El servidor estará disponible en: `http://localhost:3001`
 
 Abrir una **nueva terminal** y ejecutar:
 
-```bash
+bash (Terminal)
 # Entrar al directorio del frontend
 cd frontend
 
@@ -68,7 +69,7 @@ npm install
 
 # Iniciar el servidor de desarrollo (puerto 5173)
 npm run dev
-```
+
 
 La aplicación estará disponible en: `http://localhost:5173`
 
@@ -95,7 +96,7 @@ La aplicación estará disponible en: `http://localhost:5173`
 | createdAt         | DateTime | Auto      |                 |
 | updatedAt         | DateTime | Auto      |                 |
 
-## Tecnologías Utilizadas
+## ¡¡Tecnologías Utilizadas!!
 
 ### Backend
 - **Node.js** + **TypeScript**
