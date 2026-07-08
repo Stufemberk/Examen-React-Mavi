@@ -146,11 +146,11 @@ function App() {
           initialData={
             editingCliente
               ? {
-                  nombre_completo: editingCliente.nombre_completo,
-                  email: editingCliente.email,
-                  telefono: editingCliente.telefono || "",
-                  empresa: editingCliente.empresa,
-                }
+                nombre_completo: editingCliente.nombre_completo,
+                email: editingCliente.email,
+                telefono: editingCliente.telefono || "",
+                empresa: editingCliente.empresa,
+              }
               : undefined
           }
           onSubmit={editingCliente ? handleUpdate : handleCreate}
