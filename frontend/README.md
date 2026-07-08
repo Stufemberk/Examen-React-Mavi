@@ -1,19 +1,40 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Este proyecto fue creado utilizando **React**, **TypeScript** y **Vite**, proporcionando una configuración ligera y moderna para el desarrollo de aplicaciones web.
 
-Currently, two official plugins are available:
+La plantilla incluye **Hot Module Replacement (HMR)** para actualizar automáticamente la aplicación durante el desarrollo y **Oxlint** para el análisis estático del código y la detección de posibles errores.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
+
+## Plugins incluidos
+
+Actualmente se incluyen dos plugins oficiales para React:
+
+- **@vitejs/plugin-react**: Utiliza **Oxc** como compilador para ofrecer un desarrollo rápido y eficiente.
+
+- **@vitejs/plugin-react-swc**: Utiliza **SWC**, un compilador de alto rendimiento desarrollado en Rust, que mejora la velocidad de compilación.
+
+---
 
 ## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Esta plantilla **no habilita React Compiler por defecto**, ya que puede afectar el rendimiento durante el desarrollo y el proceso de compilación.
 
-## Expanding the Oxlint configuration
+Si deseas activarlo, puedes consultar la documentación oficial de React:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+https://react.dev/learn/react-compiler/installation
+
+---
+
+## Configuración avanzada de Oxlint
+
+Para aplicaciones destinadas a producción, se recomienda habilitar el análisis basado en tipos de TypeScript instalando el paquete:
+
+```bash
+npm install -D oxlint-tsgolint
+```
+
+Posteriormente, modifica el archivo `.oxlintrc.json` con la siguiente configuración:
 
 ```json
 {
@@ -24,9 +45,27 @@ If you are developing a production application, we recommend enabling type-aware
   },
   "rules": {
     "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+    "react/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ]
   }
 }
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Estas reglas permiten detectar errores relacionados con:
+
+- Uso incorrecto de Hooks de React.
+- Exportación de componentes.
+- Validaciones basadas en los tipos de TypeScript.
+- Buenas prácticas de desarrollo.
+
+---
+
+## Documentación
+
+Para consultar todas las reglas disponibles de Oxlint puedes visitar la documentación oficial:
+
+https://oxc.rs/docs/guide/usage/linter/rules

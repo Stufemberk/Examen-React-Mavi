@@ -1,6 +1,6 @@
-import type { Cliente, ClienteFormData, ApiError } from "../types/Cliente";
+import type { ApiError, Cliente, ClienteFormData } from "../types/Cliente";
 
-const API_URL = "http://localhost:3001/api/clientes";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001/api/clientes";
 
 async function handleResponse<T>(response: Response): Promise<T> {
   if (!response.ok) {
